@@ -13,8 +13,9 @@ const Gallery = ({ images = [], models = [] }) => {
    const filteredContent = () => {
       switch (activeFilter) {
          case '2d':
-            return images.map((image) => (
+            return images.map((image, i) => (
                <Image
+                  key={i}
                   src={image.url}
                   alt={image.title}
                />
@@ -22,7 +23,13 @@ const Gallery = ({ images = [], models = [] }) => {
          case '3d':
             return <ModelsGallery models={models} />
          default:
-            return [...images, ...models].map((item) => <div className={'w-full h-full bg-pig-pink-200 rounded-2xl p-6'}>Image</div>)
+            return [...images, ...models].map((item, i) => (
+               <div
+                  key={i}
+                  className={'w-full h-full bg-pig-pink-200 rounded-2xl p-6'}>
+                  Image
+               </div>
+            ))
       }
    }
 

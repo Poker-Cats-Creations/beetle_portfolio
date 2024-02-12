@@ -3,7 +3,6 @@ import React from 'react'
 import Gallery from '@/components/organism/Gallery/Index'
 import { SolidLogo } from '@/icons/Icons'
 import { Button } from '../atom/Button'
-import { HomeIcon } from 'lucide-react'
 
 const images = [
    { id: 1, path: '/image/image.webp' },
@@ -21,7 +20,9 @@ const Home = () => {
          <div className={'space-y-4 flex max-lg:flex-col gap-12 justify-between'}>
             <div className='w-2/4 self-center flex flex-col'>
                <h1 className='text-6xl lg:text-8xl font-bold'>HIYA!</h1>
-               <p className='text-lg lg:text-3xl'>I'm Beetle (they/them)! I'm a 25 year old queer full time artist and streamer based in PA!</p>
+               <p className='text-lg lg:text-3xl'>
+                  I&apos;m Beetle (they/them)! I&apos;m a 25 year old queer full time artist and streamer based in PA!
+               </p>
                {/* <div className='flex gap-3'>
                   <Button
                      variant={'ghost'}
